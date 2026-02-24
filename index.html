@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TORNADO </title>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Tahoma;
+background:#fffaf3;
+text-align:center;
+color:#333;
+}
+
+/* الهيدر */
+header{
+background:url("WhatsApp Image 2026-02-07 at 2.46.21 PM.jpeg") center center/cover no-repeat;
+height:260px;
+}
+
+/* أزرار المجموعات */
+nav{
+margin:20px 0;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+}
+
+nav button{
+background:white;
+color:#1f7a3a;
+border:2px solid #1f7a3a;
+padding:12px 24px;
+font-weight:bold;
+border-radius:30px;
+cursor:pointer;
+transition:0.3s;
+font-size:15px;
+}
+
+nav button:hover{
+background:#c62828;
+color:white;
+border-color:#c62828;
+transform:scale(1.05);
+}
+
+/* الصفحة الرئيسية */
+#welcome{
+min-height:70vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding-top:20px;
+}
+
+/* ⭐ تعديل صورة المنتصف */
+#welcome img{
+width:45%;
+max-width:260px;
+border-radius:20px;
+box-shadow:0 6px 18px rgba(0,0,0,0.2);
+margin-bottom:15px;
+transition:0.3s;
+}
+
+#welcome img:hover{
+transform:scale(1.05);
+}
+
+#welcome p{
+font-size:24px;
+color:#c62828;
+font-weight:bold;
+}
+
+/* المينيو */
+.menu{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+padding:30px;
+}
+
+.hidden{
+display:none;
+}
+
+.dish{
+background:white;
+border-radius:18px;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+overflow:hidden;
+border-bottom:5px solid #1f7a3a;
+transition:0.3s;
+}
+
+.dish:hover{
+transform:translateY(-5px);
+border-bottom:5px solid #c62828;
+}
+
+.dish img,
+.dish video{
+width:100%;
+height:170px;
+object-fit:cover;
+}
+
+.dish p{
+padding:12px;
+font-weight:bold;
+color:#1f7a3a;
+font-size:16px;
+}
+
+footer{
+background:linear-gradient(90deg,#1f7a3a,#c62828);
+color:white;
+padding:18px;
+margin-top:30px;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header></header>
+
+<nav>
+<button onclick="showSection('APPETIZERS')">APPETIZERS</button>
+<button onclick="showSection('PASTA')">PASTA</button>
+<button onclick="showSection('CORN')">TORNADO CORNN</button>
+<button onclick="showSection('BURGERS')">BURGERS & SANDWICH</button>
+<button onclick="showSection('SALAD')">SALAD</button>
+<button onclick="showSection('KA3KE')">TORNADO KA3KE</button>
+<button onclick="showSection('CREPE')">CREPE&WAFER</button>
+<button onclick="showSection('KOKTEL')">COCKTAIL</button>
+<button onclick="showSection('SNACK')">SNACK</button>
+<button onclick="showSection('BOX')">BOX</button>
+<button onclick="showSection('offers')">OFER TORNADO</button>
+</nav>
+
+<section id="welcome">
+<img src="WhatsApp Image 2026-02-07 at 3.22.56 PM.jpeg">
+<p>معكم بدايه بلا نهايه</p>
+</section>
+
+<section id="APPETIZERS" class="menu hidden">
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.47 PM.jpeg"><p> wedges L – 300.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.47 PM.jpeg"><p> wedges M – 200.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM (4).jpeg"><p>fries XL – 300.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM (4).jpeg"><p>fries L – 200.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM.jpeg"><p>cheese garlic bred 6 pieces – 450.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM (1).jpeg"><p>curly fries - 400.000 </p></div>
+
+
+
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM (3).jpeg"><p>b.b.q wings 10 pieces – 500.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.49 PM.jpeg"><p>buffalo wings 10 pieces – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM (2).jpeg"><p>mozrela sticks 8 pieces – 450.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.49 PM (4).jpeg"><p>calamar rings 8 pieces – 450.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.49 PM (1).jpeg"><p>onion rings 8 pieces – 450.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.49 PM (3).jpeg"><p>shrimp sticks 8 pieces – 450.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.49 PM (2).jpeg"><p>provenclal sea food 8 pieces – 600.000</p></div>
+</section>
+
+
+<section id="PASTA" class="menu hidden">
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM.jpeg"><p>PASTA PIZZA XL – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM.jpeg"><p>PASTA PIZZA  L – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 6.34.15 PM.jpeg"><p>PASTA  SUJUK XL – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 6.34.15 PM.jpeg"><p>PASTA SUJUK L – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 6.34.03 PM.jpeg"><p>PASTA  PEPERONI XL – 500.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 6.34.03 PM.jpeg"><p>PASTA PEPERONI L – 350.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 4.49.51 PM.jpeg"><p>MAAC AND CHEESE  XL – 400.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 4.49.51 PM.jpeg"><p>MAAC AND CHEESE L – 300.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.23 PM.jpeg"><p>PENNE ARABIATA XL – 300.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.23 PM.jpeg"><p>PENNE ARABIATA L – 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.13.49 AM.jpeg"><p>  CHEESE 4 XL – 300.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.13.49 AM.jpeg"><p>   CHEESE 4 L – 250.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.36.12 AM.jpeg"><p>  CHEESE WHITE  4 XL – 350.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.36.12 AM.jpeg"><p>   CHEESE  WHITE 4 L – 300.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (1).jpeg"><p>PESTO XL - 300.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (1).jpeg"><p>PESTO L - 250.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM.jpeg"><p>MEXICAN PASTA XL – 300.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM.jpeg"><p>MEXICAN PASTA L – 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.32.25 AM.jpeg"><p>CURYY PASTA XL – 300.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.32.25 AM.jpeg"><p>CURYY PASTA L – 250.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (4).jpeg"><p>SPAGETTI BOLONASE XL – 300.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (4).jpeg"><p>SPAGETTI BOLONASE L – 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (5).jpeg"><p>PASTA SHRIMP XL – 450.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (5).jpeg"><p>PASTA SHRIMP L – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM.jpeg"><p>PENNE VEGETERIEN XL – 300.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM.jpeg"><p>PENNE VEGETERIEN L – 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (2).jpeg"><p>PENNE DELANONA XL – 300.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (2).jpeg"><p>PENNE DELANONA L – 250.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (1).jpeg"><p>LASAGNE extra cheese – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (1).jpeg"><p>LASAGNE – 400.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.27.00 AM.jpeg"><p>PENNE TORNADO XL – 450.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.27.00 AM.jpeg"><p>PENNE TORNADO L – 350.000</p></div>
+
+
+
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.05.42 PM.jpeg"><p>FETTUCCINE ALFREDO XL – 450.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.05.42 PM.jpeg"><p>FETTUCCINE ALFREDO L – 350.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (6).jpeg"><p>TORTELLINI XL – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (6).jpeg"><p>TORTELLINI L – 400.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.26 PM.jpeg"><p>TORTELLINI FRKHARA XL – 600.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.26 PM.jpeg"><p>TORTELLINI FRKHARA L – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (3).jpeg"><p>FAHITA PASTA L – 350.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (3).jpeg"><p>FAHITA PASTA S – 300.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (3).jpeg"><p>FAHITA PASTA XL – 400.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (3).jpeg"><p>FETTUCCINE CHICKEN S – 300.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (3).jpeg"><p>FETTUCCINE CHICKEN XL – 450.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (3).jpeg"><p>FETTUCCINE CHICKEN L – 350.000</p></div>
+
+
+</section>
+<section id="CORN" class="menu hidden">
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM.jpeg"><p>CHEESE CORN XL – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM.jpeg"><p>CHEESE CORN L – 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM (1).jpeg"><p> B.B.Q CORN XL – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM (1).jpeg"><p> B.B.Q CORN L – 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM.jpeg"><p>MEXICAN CORN XL - 350.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM.jpeg"><p>MEXICAN CORN L - 250.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM (1).jpeg"><p>SPEICAL CORN XL – 350.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM (1).jpeg"><p>SPEICAL CORN L – 250.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM (1).jpeg"><p>SMOCKED FLAVOR CORN XL – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM (1).jpeg"><p>SMOCKED FLAVOR CORN L – 250.000</p></div>
+
+
+</section>
+<section id="BURGERS" class="menu hidden">
+
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM (2).jpeg"><p>FAHITA – 400.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.25.24 AM.jpeg"><p> MUSHROOM BuRGER - 400.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.43 PM.jpeg"><p> FRANSISCO – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.43 PM (1).jpeg"><p>CHIKEN SUB - 400.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.43 PM (2).jpeg"><p>TUNA SANDWICH – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.43 PM (3).jpeg"><p>MEXICAN SANDWICH – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM.jpeg"><p>ZINGER BURGER  – 350.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.25.24 AM.jpeg"><p> SITOS BuRGER - 400.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (1).jpeg"><p>CLASSIC BURGER– 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (2).jpeg"><p>CHILEN BURGER – 350.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (3).jpeg"><p>CRESPI SUB  – 400.000</p></div> 
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (4).jpeg"><p>STEAK SUB – 400.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (2).jpeg"><p>PICASSO – 450.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.27.54 PM.jpeg"><p>HAWAYAN TROPICANA CHIKEN – 450.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.33 PM.jpeg"><p>creazy crespi XL – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.33 PM.jpeg"><p>creazy crespi M – 350.000</p></div>
+
+
+</section>
+<section id="SALAD" class="menu hidden">
+
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM.jpeg"><p>ROCCA SALAD – 400.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (1).jpeg"><p> HALLOUM SALAD – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (4).jpeg"><p>CRAP SALAD - 500.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (5).jpeg"><p>TUNA PASTA SALAD  – 500.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.01.46 PM.jpeg"><p>TORNADO SALAD  – 600.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (3).jpeg"><p>CHICKEN CESEAR SALAD  – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.15.35 PM.jpeg"><p>GREEK SALAD – 500.000</p></div>
+</section>
+<section id="KA3KE" class="menu hidden">
+
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.19 PM.jpeg"><p>KA3KE EKAWI – 100.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM (2).jpeg"><p>KA3KE EKAWI+PICON – 120.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM (2).jpeg"><p> EKAWI+CHEDDAR – 120.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM (1).jpeg"><p>4 CHEESE & SITOS - 200.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.20 PM.jpeg"><p>KA3KE KHEDRA  – 120.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.30 PM.jpeg"><p>KA3KE 4 CHEESE  – 200.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.20 PM.jpeg"><p>لحومات KA3KE   – 200.000</p></div>
+<div class="dish">
+  <video controls>
+    <source src="WhatsApp Video 2026-02-18 at 1.21.24 PM.mp4" type="video/mp4">
+  </video>
+  <p>🔥</p>
+</div>
+
+</section>
+<section id="CREPE" class="menu hidden">
+  <div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.40.58 AM.jpeg"><p>NUTELLA & BANANA – 250.000 (EXTRA BANANA 300)</p></div>
+  
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (4).jpeg"><p>NUTELLA – 200.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (2).jpeg"><p> STRAWBERRY CHOCOLATE EXTRA– 300.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (2).jpeg"><p> STRAWBERRY CHOCOLATE – 250.000 </p></div>
+
+
+
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM.jpeg"><p>KINDER CHOCOLATE – 400.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (3).jpeg"><p>DARK CHOCOLATE - 250.000  </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.04.33 AM.jpeg"><p>OREO CHOCOLATE - 300.000  </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.06.54 PM.jpeg"><p>SPECIAL CUP – 350.000</p></div>
+<div class="dish">
+  <video controls>
+    <source src="WhatsApp Video 2026-02-20 at 5.16.23 PM.mp4" type="video/mp4">
+  </video>
+  <p>🔥</p>
+</div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.11.47 PM.jpeg"><p>SPECIAL CUP  EXTRA – 450.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (4).jpeg"><p>KINDER BUENO EXTRA – 400.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.47 PM (1).jpeg"><p>LOTUS CREAM EXTRA  – 300.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.47 PM (1).jpeg"><p>LOTUS CREAM   – 250.000 </p></div>
+
+
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (3).jpeg"><p>MILKA-FLAVORS EXTRA– 400.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (5).jpeg"><p>GALAXY-TWIX-BOUNTY – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (5).jpeg"><p>GALAXY-TWIX-BOUNTY EXTRA – 400.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.26 PM.jpeg"><p> FRUITS  – 450.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.52 PM.jpeg"><p>DUBAI CHOCOLATE EXTRA – 450.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.52 PM.jpeg"><p>crepe pistash  – 300.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.52 PM (1).jpeg"><p>MARS -SNICKERS EXTRA – 400.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.52 PM (1).jpeg"><p>MARS -SNICKERS  – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (1).jpeg"><p>BROWNIES -BANANA EXTRA – 400.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (1).jpeg"><p>BROWNIES -BANANA  – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.26 PM.jpeg"><p>STRAWBERRY - MANGO EXTRA – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.26 PM.jpeg"><p>STRAWBERRY & banana  – 350.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 1.02.06 PM.jpeg"><p>PANCAK EXTRA CHOCOLATE  – 300.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 1.02.06 PM.jpeg"><p>PANCAK  – 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (1).jpeg"><p>SPESIAL  – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.40.53 PM.jpeg"><p>PANCAK EXTRA – 350.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 1.00.03 PM.jpeg"><p> ROL BRAWNI &PHOTOCHNI – 700.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.28 PM.jpeg"><p>PANCAK EXTRA DUBAI – 600.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 1.02.23 PM.jpeg"><p>PANCAK Lotus EXTRA – 400.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 1.02.23 PM.jpeg"><p>PANCAK Lotus – 300.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.17.58 PM (2).jpeg"><p>MINI PANCAKE 15 pieces– 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.09.56 PM (1).jpeg"><p>CHEESECAKE - 100.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.26 PM.jpeg"><p>DONAT - 100.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.26 PM (1).jpeg"><p>ECLER - 100.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.29.54 PM.jpeg"><p> CHEESE CAKE - 200.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.29.55 PM (3).jpeg"><p> CHEESE CAKE - 200.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.59.58 AM.jpeg"><p> LEASE CAKE - 100.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.09.25 AM.jpeg"><p> SUCHI CREPE EXTRA - 400.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.09.25 AM.jpeg"><p> SUCHI CREPE - 350.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.16.21 AM.jpeg"><p>  WAFFLE  EXTRA - 300.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.25.44 AM.jpeg"><p>  WAFFLE CHOCOLATE - 200.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.21.30 AM.jpeg"><p>  OUZY CREPE- 350.000 (+FRUITS 400.00)</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.18.41 AM.jpeg"><p> FETTUCCINE CREPE - 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.29.45 AM.jpeg"><p> ROLL CREPE CREAM PATISSIER - 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.34.13 AM.jpeg"><p>  WHITE CHOCOLATE EXTRA - 300.000</p></div>
+</section>
+<section id="KOKTEL" class="menu hidden">
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (1).jpeg"><p>SHARAB L – 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (1).jpeg"><p>SHARAB S – 200.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (1).jpeg"><p>SHARAB XL – 300.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (2).jpeg"><p>AVOCADO S – 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (2).jpeg"><p>AVOCADO XL – 450.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (2).jpeg"><p>AVOCADO L – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM.jpeg"><p> NACHI L – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM.jpeg"><p> NACHI S – 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM.jpeg"><p> NACHI XL – 450.000</p></div>
+
+
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (1).jpeg"><p> SHE2AF  S – 250.000</p></div> 
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (1).jpeg"><p> SHE2AF  XL – 450.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (1).jpeg"><p> SHE2AF  L – 350.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM.jpeg"><p>صحن صغير - 400.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM.jpeg"><p>صحن وسط - 600.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM.jpeg"><p>صحن كبير - 900.000 </p></div>
+
+</section>
+<section id="SNACK" class="menu hidden">
+
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 3.04.17 PM.jpeg"><p>CHEKEN CURYY +RICE – 700.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 3.04.17 PM (2).jpeg"><p>STROGONOF +RICE – 700.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 3.04.17 PM (1).jpeg"><p>CHEKEN CRESPI +RICE  – 700.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.50 PM.jpeg"><p> CRESPI +fries – 600.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM (2).jpeg"><p>FAHITA +fries– 600.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM.jpeg"><p>ZINGER + fries– 600.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (1).jpeg"><p> CLASIC BURGER+ fries– 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.54.33 AM.jpeg"><p> TORNADO BURGER + fries– 750.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.25.24 AM.jpeg"><p> SITOS BURGER + fries– 600.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.25.24 AM (2).jpeg"><p> MUSHROOM BURGER + fries– 600.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM.jpeg"><p> MOZRELA BEEF BURGER+ fries– 600.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (4).jpeg"><p> STEAK SUB + fries– 600.000</p></div> 
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (2).jpeg"><p> PECASO + fries – 600.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.27.54 PM.jpeg"><p>HAWAYAN TROPICANA CHIKEN + fries – 600.000</p></div>
+</section>
+<section id="BOX" class="menu hidden">
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.09.54 PM.jpeg"><p> BOX CREPE – (1000.000-1200.000-1500.000)</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.09.55 PM.jpeg"><p> BOX CREPE– (1000.000-1200.000-1500.000)</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.09.56 PM.jpeg"><p> BOX CREPE – (1000.000-1200.000-1500.000)</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.17.58 PM (3).jpeg"><p> BOX CREPE – (1000.000-1200.000-1500.000)</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.17.58 PM (4).jpeg"><p> BOX CREPE – (1000.000-1200.000-1500.000)</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.17.58 PM (6).jpeg"><p> BOX CREPE – (1000.000-1200.000-1500.000)</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM (1).jpeg"><p> BOX SNACK – 900.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM (2).jpeg"><p> BOX SNACK – 900.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM (3).jpeg"><p> BOX SNACK – 900.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM (4).jpeg"><p> BOX SNACK – 900.000</p></div>
+
+
+</section>
+<section id="offers" class="menu hidden">
+
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.40.51 PM (1).jpeg"><p> OFFER – 500.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.40.54 PM (1).jpeg"><p> OFFER – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.40.54 PM.jpeg"><p> OFFER – 900.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.25 PM.jpeg"><p> OFFER – 1.000.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.28 PM (1).jpeg"><p> OFFER –500.000 </p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.29 PM (1).jpeg"><p> OFFER –500.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.29 PM.jpeg"><p> OFFER – 500.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 11.07.17 AM.jpeg"><p> OFFER –500.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.30 PM (1).jpeg"><p> OFFER – 700.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.32 PM (1).jpeg"><p> OFFER – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.34 PM (2).jpeg"><p> OFFER –500.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.34 PM.jpeg"><p> OFFER – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.32 PM.jpeg"><p> OFFER – 900.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 11.11.58 AM.jpeg"><p> OFFER – 1.000.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 11.11.57 AM (4).jpeg"><p> OFFER – 700.000</p></div>
+
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 11.11.57 AM.jpeg"><p> OFFER – 700.000</p></div>
+<div class="dish">
+  <video controls>
+    <source src="WhatsApp Video 2026-02-20 at 5.12.11 PM.mp4" type="video/mp4">
+  </video>
+  <p>🔥</p>
+</div>
+
+
+</section>
+
+<footer>
+©️ TORNADO
+</footer>
+
+<script>
+
+function showSection(id){
+
+document.getElementById("welcome").style.display="none";
+
+document.querySelectorAll(".menu").forEach(section=>{
+section.classList.add("hidden");
+});
+
+document.getElementById(id).classList.remove("hidden");
+
+}
+
+</script>
+
+</body>
+</html>
