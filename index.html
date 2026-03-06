@@ -132,6 +132,68 @@ margin-top:30px;
 font-weight:bold;
 }
 
+/* سلة الطلب */
+#cart{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+background:#09d349;
+border-top:3px solid #09c12b;
+padding:15px;
+box-shadow:0 -5px 20px rgba(16, 190, 68, 0.6);
+}
+
+#cart ul{
+list-style:none;
+max-height:140px;
+overflow:auto;
+margin-bottom:10px;
+text-align:right;
+}
+
+.cart-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:8px;
+font-size:14px;
+}
+
+.cart-controls button{
+background:#ff9800;
+border:none;
+padding:2px 8px;
+margin:0 3px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.remove{
+background:#b71c1c!important;
+color:white;
+}
+
+/* زر واتساب */
+#cart button.send{
+background:#25d366;
+border:none;
+padding:12px 25px;
+color:white;
+font-weight:bold;
+border-radius:25px;
+cursor:pointer;
+margin-top:8px;
+}
+
+footer{
+margin-top:200px;
+padding:15px;
+background:#b71c1c;
+color:white;
+}
+
 </style>
 </head>
 
@@ -159,135 +221,232 @@ font-weight:bold;
 </section>
 
 <section id="APPETIZERS" class="menu hidden">
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.47 PM.jpeg"><p> wedges L – 300.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.47 PM.jpeg"><p> wedges M – 200.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM (4).jpeg"><p>fries XL – 300.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM (4).jpeg"><p>fries L – 200.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM.jpeg"><p>cheese garlic bred 6 pieces – 450.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM (1).jpeg"><p>curly fries - 400.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.47 PM.jpeg"><p> wedges L – 300.000 </p>
+<button onclick="addToCart('wedges l',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.47 PM.jpeg"><p> wedges M – 200.000 </p>
+<button onclick="addToCart('wedges m',200000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM (4).jpeg"><p>fries XL – 300.000 </p>
+<button onclick="addToCart('fries xl',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM (4).jpeg"><p>fries L – 200.000 </p>
+<button onclick="addToCart('fries l',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM.jpeg"><p>cheese garlic bred 6 pieces – 450.000 </p>
+<button onclick="addToCart('cheese garlic bred 6 pieces',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM (1).jpeg"><p>curly fries - 400.000 </p>
+<button onclick="addToCart('curly fries ',400000)">أضف إلى السلة</button></div>
 
 
 
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM (3).jpeg"><p>b.b.q wings 10 pieces – 500.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.49 PM.jpeg"><p>buffalo wings 10 pieces – 500.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM (2).jpeg"><p>MOZZARELLA sticks 8 pieces – 450.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.49 PM (4).jpeg"><p>calamar rings 8 pieces – 450.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.49 PM (1).jpeg"><p>onion rings 8 pieces – 450.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.49 PM (3).jpeg"><p>shrimp sticks 8 pieces – 450.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.49 PM (2).jpeg"><p>provenclal sea food 8 pieces – 600.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM (3).jpeg"><p>b.b.q wings 10 pieces – 500.000 </p>
+<button onclick="addToCart('b.b.q wings 10 pieces',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.49 PM.jpeg"><p>buffalo wings 10 pieces – 500.000</p>
+<button onclick="addToCart('buffalo wings 10 pieces ',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.48 PM (2).jpeg"><p>MOZZARELLA sticks 8 pieces – 450.000</p>
+<button onclick="addToCart('MOZZARELLA sticks 8 pieces',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.49 PM (4).jpeg"><p>calamar rings 8 pieces – 450.000</p>
+<button onclick="addToCart('calamar rings 8 pieces',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.49 PM (1).jpeg"><p>onion rings 8 pieces – 450.000</p>
+<button onclick="addToCart('onion rings 8 pieces ',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.49 PM (3).jpeg"><p>shrimp sticks 8 pieces – 450.000 </p>
+<button onclick="addToCart('shrimp sticks 8 pieces',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 4.47.49 PM (2).jpeg"><p>provenclal sea food 8 pieces – 600.000</p>
+<button onclick="addToCart('provenclal sea food 8 pieces',600000)">أضف إلى السلة</button></div>
 </section>
 
 
 <section id="PASTA" class="menu hidden">
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM.jpeg"><p>PASTA PIZZA XL – 500.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM.jpeg"><p>PASTA PIZZA  L – 350.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-21 at 6.34.15 PM.jpeg"><p>PASTA  SUJUK XL – 500.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-21 at 6.34.15 PM.jpeg"><p>PASTA SUJUK L – 350.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-21 at 6.34.03 PM.jpeg"><p>PASTA  PEPERONI XL – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM.jpeg"><p>PASTA PIZZA XL – 500.000</p>
+<button onclick="addToCart('PASTA PIZZA XL',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM.jpeg"><p>PASTA PIZZA  L – 350.000</p>
+<button onclick="addToCart('PASTA PIZZA L',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 6.34.15 PM.jpeg"><p>PASTA  SUJUK XL – 500.000</p>
+<button onclick="addToCart('PASTA  SUJUK XL ',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 6.34.15 PM.jpeg"><p>PASTA SUJUK L – 350.000</p>
+<button onclick="addToCart('PASTA SUJUK L',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 6.34.03 PM.jpeg"><p>PASTA  PEPERONI XL – 500.000</p>
+<button onclick="addToCart('PASTA  PEPERONI XL',500000)">أضف إلى السلة</button></div>
 
-<div class="dish"><img src="WhatsApp Image 2026-02-21 at 6.34.03 PM.jpeg"><p>PASTA PEPERONI L – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 6.34.03 PM.jpeg"><p>PASTA PEPERONI L – 350.000</p>
+<button onclick="addToCart('PASTA PEPERONI L',350000)">أضف إلى السلة</button></div>
 
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 4.49.51 PM.jpeg"><p>MAAC AND CHEESE  XL – 400.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 4.49.51 PM.jpeg"><p>MAAC AND CHEESE L – 300.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.23 PM.jpeg"><p>PENNE ARABIATA XL – 300.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.23 PM.jpeg"><p>PENNE ARABIATA L – 250.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.13.49 AM.jpeg"><p> four_CHEESE XL – 300.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.13.49 AM.jpeg"><p> four-CHEESE  L – 250.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.36.12 AM.jpeg"><p>  four-CHEESE WHITE  XL – 350.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.36.12 AM.jpeg"><p>   four-CHEESE  WHITE L – 300.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (1).jpeg"><p>PESTO XL - 300.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (1).jpeg"><p>PESTO L - 250.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM.jpeg"><p>MEXICAN PASTA XL – 300.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM.jpeg"><p>MEXICAN PASTA L – 250.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.32.25 AM.jpeg"><p>CURYY PASTA XL – 300.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.32.25 AM.jpeg"><p>CURYY PASTA L – 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 4.49.51 PM.jpeg"><p>MAAC AND CHEESE  XL – 400.000</p>
+<button onclick="addToCart('MAAC AND CHEESE  XL ',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 4.49.51 PM.jpeg"><p>MAAC AND CHEESE L – 300.000</p>
+<button onclick="addToCart('MAAC AND CHEESE L ',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.23 PM.jpeg"><p>PENNE ARABIATA XL – 300.000</p>
+<button onclick="addToCart('PENNE ARABIATA XL ',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.23 PM.jpeg"><p>PENNE ARABIATA L – 250.000</p>
+<button onclick="addToCart('PENNE ARABIATA L ',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.13.49 AM.jpeg"><p> four_CHEESE XL – 300.000 </p>
+<button onclick="addToCart('four_CHEESE XL ',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.13.49 AM.jpeg"><p> four-CHEESE  L – 250.000 </p>
+<button onclick="addToCart('four-CHEESE  L',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.36.12 AM.jpeg"><p>  four-CHEESE WHITE  XL – 350.000 </p>
+<button onclick="addToCart('four-CHEESE WHITE  XL',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.36.12 AM.jpeg"><p>   four-CHEESE  WHITE L – 300.000 </p>
+<button onclick="addToCart('four-CHEESE  WHITE L',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (1).jpeg"><p>PESTO XL - 300.000 </p>
+<button onclick="addToCart('PESTO XL',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (1).jpeg"><p>PESTO L - 250.000 </p>
+<button onclick="addToCart('PESTO L',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM.jpeg"><p>MEXICAN PASTA XL – 300.000</p>
+<button onclick="addToCart('MEXICAN PASTA XL',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM.jpeg"><p>MEXICAN PASTA L – 250.000</p>
+<button onclick="addToCart('MEXICAN PASTA L',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.32.25 AM.jpeg"><p>CURYY PASTA XL – 300.000</p>
+<button onclick="addToCart('CURYY PASTA XL ',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.32.25 AM.jpeg"><p>CURYY PASTA L – 250.000</p>
+<button onclick="addToCart('CURYY PASTA L',250000)">أضف إلى السلة</button></div>
 
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (4).jpeg"><p>SPAGETTI BOLONASE XL – 300.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (4).jpeg"><p>SPAGETTI BOLONASE L – 250.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (5).jpeg"><p>PASTA SHRIMP XL – 450.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (5).jpeg"><p>PASTA SHRIMP L – 350.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM.jpeg"><p>PENNE VEGETERIEN XL – 300.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM.jpeg"><p>PENNE VEGETERIEN L – 250.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (2).jpeg"><p>PENNE DELANONA XL – 300.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (2).jpeg"><p>PENNE DELANONA L – 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (4).jpeg"><p>SPAGETTI BOLONASE XL – 300.000</p>
+<button onclick="addToCart('SPAGETTI BOLONASE XL',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (4).jpeg"><p>SPAGETTI BOLONASE L – 250.000</p>
+<button onclick="addToCart('SPAGETTI BOLONASE L',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (5).jpeg"><p>PASTA SHRIMP XL – 450.000</p>
+<button onclick="addToCart('PASTA SHRIMP XL',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (5).jpeg"><p>PASTA SHRIMP L – 350.000</p>
+<button onclick="addToCart('PASTA SHRIMP L',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM.jpeg"><p>PENNE VEGETERIEN XL – 300.000</p>
+<button onclick="addToCart('PENNE VEGETERIEN XL ',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM.jpeg"><p>PENNE VEGETERIEN L – 250.000</p>
+<button onclick="addToCart('PENNE VEGETERIEN L ',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (2).jpeg"><p>PENNE DELANONA XL – 300.000</p>
+<button onclick="addToCart('PENNE DELANONA XL',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (2).jpeg"><p>PENNE DELANONA L – 250.000</p>
+<button onclick="addToCart('PENNE DELANONA L',250000)">أضف إلى السلة</button></div>
 
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (1).jpeg"><p>LASAGNE extra cheese – 500.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (1).jpeg"><p>LASAGNE – 400.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (1).jpeg"><p>LASAGNE extra cheese – 500.000</p>
+<button onclick="addToCart('LASAGNE extra cheese ',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (1).jpeg"><p>LASAGNE – 400.000</p>
+<button onclick="addToCart('LASAGNE ',400000)">أضف إلى السلة</button></div>
 
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.27.00 AM.jpeg"><p>PENNE TORNADO XL – 450.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.27.00 AM.jpeg"><p>PENNE TORNADO L – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.27.00 AM.jpeg"><p>PENNE TORNADO XL – 450.000</p>
+<button onclick="addToCart('PENNE TORNADO XL',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.27.00 AM.jpeg"><p>PENNE TORNADO L – 350.000</p>
+<button onclick="addToCart('PENNE TORNADO L',350000)">أضف إلى السلة</button></div>
 
 
 
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.05.42 PM.jpeg"><p>FETTUCCINE ALFREDO XL – 450.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.05.42 PM.jpeg"><p>FETTUCCINE ALFREDO L – 350.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (6).jpeg"><p>TORTELLINI XL – 500.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (6).jpeg"><p>TORTELLINI L – 400.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.26 PM.jpeg"><p>TORTELLINI FRKHARA XL – 600.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.26 PM.jpeg"><p>TORTELLINI FRKHARA L – 500.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (3).jpeg"><p>FAHITA PASTA L – 350.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (3).jpeg"><p>FAHITA PASTA S – 300.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (3).jpeg"><p>FAHITA PASTA XL – 400.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (3).jpeg"><p>FETTUCCINE CHICKEN S – 300.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (3).jpeg"><p>FETTUCCINE CHICKEN XL – 450.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (3).jpeg"><p>FETTUCCINE CHICKEN L – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.05.42 PM.jpeg"><p>FETTUCCINE ALFREDO XL – 450.000 </p>
+<button onclick="addToCart('FETTUCCINE ALFREDO XL ',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.05.42 PM.jpeg"><p>FETTUCCINE ALFREDO L – 350.000 </p>
+<button onclick="addToCart('FETTUCCINE ALFREDO L',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (6).jpeg"><p>TORTELLINI XL – 500.000</p>
+<button onclick="addToCart('TORTELLINI XL ',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (6).jpeg"><p>TORTELLINI L – 400.000</p>
+<button onclick="addToCart('TORTELLINI L ',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.26 PM.jpeg"><p>TORTELLINI FRKHARA XL – 600.000</p>
+<button onclick="addToCart('TORTELLINI FRKHARA XL',600000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.26 PM.jpeg"><p>TORTELLINI FRKHARA L – 500.000</p>
+<button onclick="addToCart('TORTELLINI FRKHARA L',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (3).jpeg"><p>FAHITA PASTA L – 350.000 </p>
+<button onclick="addToCart('FAHITA PASTA L',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (3).jpeg"><p>FAHITA PASTA S – 300.000 </p>
+<button onclick="addToCart('FAHITA PASTA S ',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.24 PM (3).jpeg"><p>FAHITA PASTA XL – 400.000 </p>
+<button onclick="addToCart('FAHITA PASTA XL',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (3).jpeg"><p>FETTUCCINE CHICKEN S – 300.000</p>
+<button onclick="addToCart('FETTUCCINE CHICKEN S',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (3).jpeg"><p>FETTUCCINE CHICKEN XL – 450.000</p>
+<button onclick="addToCart('FETTUCCINE CHICKEN XL',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 4.07.25 PM (3).jpeg"><p>FETTUCCINE CHICKEN L – 350.000</p>
+<button onclick="addToCart('FETTUCCINE CHICKEN L ',350000)">أضف إلى السلة</button></div>
 
 
 </section>
 <section id="CORN" class="menu hidden">
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM.jpeg"><p>CHEESE CORN XL – 350.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM.jpeg"><p>CHEESE CORN L – 250.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM (1).jpeg"><p> B.B.Q CORN XL – 350.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM (1).jpeg"><p> B.B.Q CORN L – 250.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM.jpeg"><p>MEXICAN CORN XL - 350.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM.jpeg"><p>MEXICAN CORN L - 250.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM (1).jpeg"><p>SPEICAL CORN XL – 350.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM (1).jpeg"><p>SPEICAL CORN L – 250.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM (1).jpeg"><p>SMOCKED FLAVOR CORN XL – 350.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM (1).jpeg"><p>SMOCKED FLAVOR CORN L – 250.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM.jpeg"><p>CHEESE CORN XL – 350.000</p>
+<button onclick="addToCart('CHEESE CORN XL ',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM.jpeg"><p>CHEESE CORN L – 250.000</p>
+<button onclick="addToCart('CHEESE CORN L ',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM (1).jpeg"><p> B.B.Q CORN XL – 350.000</p>
+<button onclick="addToCart('B.B.Q CORN XL ',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM (1).jpeg"><p> B.B.Q CORN L – 250.000</p>
+<button onclick="addToCart('B.B.Q CORN L',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM.jpeg"><p>MEXICAN CORN XL - 350.000 </p>
+<button onclick="addToCart('MEXICAN CORN XL',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM.jpeg"><p>MEXICAN CORN L - 250.000 </p>
+<button onclick="addToCart('MEXICAN CORN L ',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM (1).jpeg"><p>SPEICAL CORN XL – 350.000 </p>
+<button onclick="addToCart('SPEICAL CORN XL ',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.41 PM (1).jpeg"><p>SPEICAL CORN L – 250.000 </p>
+<button onclick="addToCart('SPEICAL CORN L ',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM (1).jpeg"><p>SMOCKED FLAVOR CORN XL – 350.000</p>
+<button onclick="addToCart('SMOCKED FLAVOR CORN XL',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM (1).jpeg"><p>SMOCKED FLAVOR CORN L – 250.000</p>
+<button onclick="addToCart('SMOCKED FLAVOR CORN L',250000)">أضف إلى السلة</button></div>
 
 
 </section>
 <section id="BURGERS" class="menu hidden">
 
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM (2).jpeg"><p>FAHITA – 450.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.25.24 AM (2).jpeg"><p> MUSHROOM BuRGER - 400.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.43 PM.jpeg"><p> FRANSISCO – 350.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.43 PM (1).jpeg"><p>CHIKEN SUB - 400.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.43 PM (2).jpeg"><p>TUNA SANDWICH – 350.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.43 PM (3).jpeg"><p>MEXICAN SANDWICH – 350.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM.jpeg"><p>ZINGER BURGER  – 350.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.25.24 AM.jpeg"><p> SITOS BURGER - 400.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (1).jpeg"><p>CLASSIC BURGER– 350.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (2).jpeg"><p>CHICKEN BURGER – 350.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (3).jpeg"><p>CRESPY SUB  – 400.000</p></div> 
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (4).jpeg"><p>STEAK SUB – 400.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (2).jpeg"><p>PICASSO – 450.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.27.54 PM.jpeg"><p>HAWAiN TROPICANA CHIKEN – 450.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.33 PM.jpeg"><p>creazy crespy XL – 500.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.33 PM.jpeg"><p>creazy crespy M – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM (2).jpeg"><p>FAHITA – 400.000 </p>
+<button onclick="addToCart('FAHITA ',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.25.24 AM (2).jpeg"><p> MUSHROOM BuRGER - 400.000</p>
+<button onclick="addToCart('MUSHROOM BuRGER',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.43 PM.jpeg"><p> FRANSISCO – 350.000</p>
+<button onclick="addToCart('FRANSISCO',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.43 PM (1).jpeg"><p>CHIKEN SUB - 400.000 </p>
+<button onclick="addToCart('CHIKEN SUB ',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.43 PM (2).jpeg"><p>TUNA SANDWICH – 350.000</p>
+<button onclick="addToCart('TUNA SANDWICH',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.43 PM (3).jpeg"><p>MEXICAN SANDWICH – 350.000</p>
+<button onclick="addToCart('MEXICAN SANDWICH ',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM.jpeg"><p>ZINGER BURGER  – 350.000 </p>
+<button onclick="addToCart('ZINGER BURGER',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.25.24 AM.jpeg"><p> SITOS BURGER - 400.000</p>
+<button onclick="addToCart('SITOS BURGER',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (1).jpeg"><p>CLASSIC BURGER– 350.000</p>
+<button onclick="addToCart('CLASSIC BURGER',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (2).jpeg"><p>CHICKEN BURGER – 350.000 </p>
+<button onclick="addToCart('CHICKEN BURGER',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (3).jpeg"><p>CRESPY SUB  – 400.000</p>
+<button onclick="addToCart('CRESPY SUB ',400000)">أضف إلى السلة</button></div> 
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (4).jpeg"><p>STEAK SUB – 400.000</p>
+<button onclick="addToCart('STEAK SUB ',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (2).jpeg"><p>PICASSO – 450.000</p>
+<button onclick="addToCart('PICASSO',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.27.54 PM.jpeg"><p>HAWAiN TROPICANA CHIKEN – 450.000</p>
+<button onclick="addToCart('HAWAiN TROPICANA CHIKEN',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.33 PM.jpeg"><p>creazy crespy XL – 500.000</p>
+<button onclick="addToCart('creazy crespy XL',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.33 PM.jpeg"><p>creazy crespy M – 350.000</p>
+<button onclick="addToCart('creazy crespy M',350000)">أضف إلى السلة</button></div>
 
 
 </section>
 <section id="SALAD" class="menu hidden">
 
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM.jpeg"><p>ROCCA SALAD – 400.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (1).jpeg"><p> HALLOUM SALAD – 500.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (4).jpeg"><p>CRAB SALAD - 500.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (5).jpeg"><p>TUNA PASTA SALAD  – 500.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.01.46 PM.jpeg"><p>TORNADO SALAD  – 600.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (3).jpeg"><p> CEASAR SALAD  – 500.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.15.35 PM.jpeg"><p>GREEK SALAD – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM.jpeg"><p>ROCCA SALAD – 400.000 </p>
+<button onclick="addToCart('ROCCA SALAD',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (1).jpeg"><p> HALLOUM SALAD – 500.000</p>
+<button onclick="addToCart('HALLOUM SALAD',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (4).jpeg"><p>CRAB SALAD - 500.000 </p>
+<button onclick="addToCart('CRAB SALAD',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (5).jpeg"><p>TUNA PASTA SALAD  – 500.000 </p>
+<button onclick="addToCart('TUNA PASTA SALAD',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.01.46 PM.jpeg"><p>TORNADO SALAD  – 600.000</p>
+<button onclick="addToCart('TORNADO SALAD',600000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (3).jpeg"><p> CEASAR SALAD  – 500.000</p>
+<button onclick="addToCart('CEASAR SALAD ',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.15.35 PM.jpeg"><p>GREEK SALAD – 500.000</p>
+<button onclick="addToCart('GREEK SALAD ',500000)">أضف إلى السلة</button></div>
 </section>
 <section id="KA3KE" class="menu hidden">
 
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.19 PM.jpeg"><p>KA3KE EKAWI – 100.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM (2).jpeg"><p>KA3KE EKAWI+PICON – 120.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM (2).jpeg"><p> EKAWI+CHEDDAR – 120.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM (1).jpeg"><p>four_CHEESE & SITOS - 200.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.20 PM.jpeg"><p>KA3KE KHEDRA  – 120.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.30 PM.jpeg"><p>KA3KE four_CHEESE  – 200.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.20 PM.jpeg"><p>لحومات KA3KE   – 200.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.19 PM.jpeg"><p>KA3KE EKAWI – 100.000 </p>
+<button onclick="addToCart('KA3KE EKAWI',100000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM (2).jpeg"><p>KA3KE EKAWI+PICON – 120.000 </p>
+<button onclick="addToCart('KA3KE EKAWI+PICON  ',120000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM (2).jpeg"><p> EKAWI+CHEDDAR – 120.000</p>
+<button onclick="addToCart('EKAWI+CHEDDAR',120000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM (1).jpeg"><p>four_CHEESE & SITOS - 200.000 </p>
+<button onclick="addToCart('four_CHEESE & SITOS',200000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.20 PM.jpeg"><p>KA3KE KHEDRA  – 120.000</p>
+<button onclick="addToCart('KA3KE KHEDRA',120000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.30 PM.jpeg"><p>KA3KE four_CHEESE  – 200.000</p>
+<button onclick="addToCart('KA3KE four_CHEESE ',200000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.20 PM.jpeg"><p>لحومات KA3KE   – 200.000</p>
+<button onclick="addToCart('لحومات KA3KE ',200000)">أضف إلى السلة</button></div>
 <div class="dish">
   <video controls>
     <source src="WhatsApp Video 2026-02-18 at 1.21.24 PM.mp4" type="video/mp4">
@@ -297,147 +456,238 @@ font-weight:bold;
 
 </section>
 <section id="CREPE" class="menu hidden">
-  <div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.40.58 AM.jpeg"><p>NUTELLA & BANANA – 250.000 (EXTRA BANANA 300)</p></div>
-  
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (4).jpeg"><p>NUTELLA – 200.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (2).jpeg"><p> STRAWBERRY CHOCOLATE EXTRA– 300.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (2).jpeg"><p> STRAWBERRY CHOCOLATE – 250.000 </p></div>
-
-
-
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM.jpeg"><p>KINDER CHOCOLATE – 400.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (3).jpeg"><p>DARK CHOCOLATE - 250.000  </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.04.33 AM.jpeg"><p>OREO CHOCOLATE - 300.000  </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.06.54 PM.jpeg"><p>SPECIAL CUP – 350.000</p></div>
+  <div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.40.58 AM.jpeg"><p>NUTELLA & BANANA – 250.000 (EXTRA BANANA 300)</p>
+  <button onclick="addToCart(' NUTELLA & BANANA',250000)">أضف إلى السلة</button></div> 
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (4).jpeg"><p>NUTELLA – 200.000 </p>
+<button onclick="addToCart(' NUTELLA',200000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (2).jpeg"><p> STRAWBERRY CHOCOLATE EXTRA– 300.000 </p>
+<button onclick="addToCart(' STRAWBERRY CHOCOLATE EXTRA',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (2).jpeg"><p> STRAWBERRY CHOCOLATE – 250.000 </p>
+<button onclick="addToCart(' STRAWBERRY CHOCOLATE ',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM.jpeg"><p>KINDER CHOCOLATE – 400.000</p>
+<button onclick="addToCart(' KINDER CHOCOLATE',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (3).jpeg"><p>DARK CHOCOLATE - 250.000  </p>
+<button onclick="addToCart('DARK CHOCOLATE ',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.04.33 AM.jpeg"><p>OREO CHOCOLATE - 300.000  </p>
+<button onclick="addToCart('OREO CHOCOLATE ',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.06.54 PM.jpeg"><p>SPECIAL CUP – 350.000</p>
+<button onclick="addToCart(' SPECIAL CUP',350000)">أضف إلى السلة</button></div>
 <div class="dish">
   <video controls>
     <source src="WhatsApp Video 2026-02-20 at 5.16.23 PM.mp4" type="video/mp4">
   </video>
   <p>🔥</p>
 </div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.11.47 PM.jpeg"><p>SPECIAL CUP  EXTRA – 450.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (4).jpeg"><p>KINDER BUENO EXTRA – 400.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.47 PM (1).jpeg"><p>LOTUS CREAM EXTRA  – 300.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.47 PM (1).jpeg"><p>LOTUS CREAM   – 250.000 </p></div>
-
-
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (3).jpeg"><p>MILKA-FLAVORS EXTRA– 400.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (5).jpeg"><p>GALAXY-TWIX-BOUNTY – 350.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (5).jpeg"><p>GALAXY-TWIX-BOUNTY EXTRA – 400.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.26 PM.jpeg"><p> FRUITS  – 450.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.52 PM.jpeg"><p>DUBAI CHOCOLATE EXTRA – 450.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.52 PM.jpeg"><p>crepe pistash  – 300.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.52 PM (1).jpeg"><p>MARS -SNICKERS EXTRA – 400.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.52 PM (1).jpeg"><p>MARS -SNICKERS  – 350.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (1).jpeg"><p>BROWNIES -BANANA EXTRA – 400.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (1).jpeg"><p>BROWNIES -BANANA  – 350.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.26 PM.jpeg"><p>STRAWBERRY - MANGO EXTRA – 500.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.26 PM.jpeg"><p>STRAWBERRY & banana  – 350.000</p></div>
-
-<div class="dish"><img src="WhatsApp Image 2026-02-21 at 1.02.06 PM.jpeg"><p>PANCAKE EXTRA CHOCOLATE  – 300.000</p></div>
-
-<div class="dish"><img src="WhatsApp Image 2026-02-21 at 1.02.06 PM.jpeg"><p>PANCAKE  – 250.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (1).jpeg"><p>SPECIAL  – 500.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.40.53 PM.jpeg"><p>PANCAKE EXTRA – 350.000</p></div>
-
-<div class="dish"><img src="WhatsApp Image 2026-02-21 at 1.00.03 PM.jpeg"><p> ROL BRAWNI &PHOTOCHNI – 700.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.28 PM.jpeg"><p>PANCAKE EXTRA DUBAI – 600.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-21 at 1.02.23 PM.jpeg"><p>PANCAKE Lotus EXTRA – 400.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-21 at 1.02.23 PM.jpeg"><p>PANCAKE Lotus – 300.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.17.58 PM (2).jpeg"><p>MINI PANCAKE 15 pieces– 250.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.09.56 PM (1).jpeg"><p>CHEESECAKE - 100.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.26 PM.jpeg"><p>DONAT - 100.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.26 PM (1).jpeg"><p>ECLER - 100.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.29.54 PM.jpeg"><p> CHEESE CAKE - 200.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.29.55 PM (3).jpeg"><p> CHEESE CAKE - 200.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.59.58 AM.jpeg"><p> LEASE CAKE - 100.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.09.25 AM.jpeg"><p> SUCHI CREPE EXTRA - 400.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.09.25 AM.jpeg"><p> SUCHI CREPE - 350.000</p></div>
-
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.16.21 AM.jpeg"><p>  WAFFLE  EXTRA - 300.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.25.44 AM.jpeg"><p>  WAFFLE CHOCOLATE - 200.000</p></div>
-
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.21.30 AM.jpeg"><p>  OUZY CREPE- 350.000 (+FRUITS 400.00)</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.18.41 AM.jpeg"><p> FETTUCCINE CREPE - 250.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.29.45 AM.jpeg"><p> ROLL CREPE CREAM PATISSIER - 250.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.34.13 AM.jpeg"><p>  WHITE CHOCOLATE EXTRA - 300.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.11.47 PM.jpeg"><p>SPECIAL CUP  EXTRA – 450.000</p>
+<button onclick="addToCart(' SPECIAL CUP  EXTRA',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (4).jpeg"><p>KINDER BUENO EXTRA – 400.000 </p>
+<button onclick="addToCart('KINDER BUENO EXTRA',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.47 PM (1).jpeg"><p>LOTUS CREAM EXTRA  – 300.000 </p>
+<button onclick="addToCart(' LOTUS CREAM EXTRA   ',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.47 PM (1).jpeg"><p>LOTUS CREAM   – 250.000 </p>
+<button onclick="addToCart(' LOTUS CREAM  ',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (3).jpeg"><p>MILKA-FLAVORS EXTRA– 400.000</p>
+<button onclick="addToCart('MILKA-FLAVORS EXTRA ',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (5).jpeg"><p>GALAXY-TWIX-BOUNTY – 350.000</p>
+<button onclick="addToCart(' GALAXY-TWIX-BOUNTY ',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (5).jpeg"><p>GALAXY-TWIX-BOUNTY EXTRA – 400.000</p>
+<button onclick="addToCart(' GALAXY-TWIX-BOUNTY EXTRA  ',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.26 PM.jpeg"><p> FRUITS  – 450.000</p>
+<button onclick="addToCart(' FRUITS  ',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.52 PM.jpeg"><p>DUBAI CHOCOLATE EXTRA – 450.000</p>
+<button onclick="addToCart('DUBAI CHOCOLATE EXTRA ',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.52 PM.jpeg"><p>crepe pistash  – 300.000</p>
+<button onclick="addToCart('crepe pistash  ',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.52 PM (1).jpeg"><p>MARS -SNICKERS EXTRA – 400.000</p>
+<button onclick="addToCart(' MARS -SNICKERS EXTRA',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.52 PM (1).jpeg"><p>MARS -SNICKERS  – 350.000</p>
+<button onclick="addToCart(' MARS -SNICKERS  ',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (1).jpeg"><p>BROWNIES -BANANA EXTRA – 400.000</p>
+<button onclick="addToCart(' BROWNIES -BANANA EXTRA  ',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (1).jpeg"><p>BROWNIES -BANANA  – 350.000</p>
+<button onclick="addToCart(' BROWNIES -BANANA  ',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.26 PM.jpeg"><p>STRAWBERRY - MANGO EXTRA – 500.000</p>
+<button onclick="addToCart('STRAWBERRY - MANGO EXTRA ',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.26 PM.jpeg"><p>STRAWBERRY & banana  – 350.000</p>
+<button onclick="addToCart(' STRAWBERRY & banana  ',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 1.02.06 PM.jpeg"><p>PANCAKE EXTRA CHOCOLATE  – 300.000</p>
+<button onclick="addToCart(' PANCAKE EXTRA CHOCOLATE  ',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 1.02.06 PM.jpeg"><p>PANCAKE  – 250.000</p>
+<button onclick="addToCart(' PANCAKE ',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.51 PM (1).jpeg"><p>SPECIAL  – 500.000</p>
+<button onclick="addToCart(' SPECIAL  ',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.40.53 PM.jpeg"><p>PANCAKE EXTRA – 350.000</p>
+<button onclick="addToCart(' PANCAKE EXTRA  ',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 1.00.03 PM.jpeg"><p> ROL BRAWNI &PHOTOCHNI – 700.000</p>
+<button onclick="addToCart(' ROL BRAWNI &PHOTOCHNI ',700000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.28 PM.jpeg"><p>PANCAKE EXTRA DUBAI – 600.000</p>
+<button onclick="addToCart('PANCAKE EXTRA DUBAI',600000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 1.02.23 PM.jpeg"><p>PANCAKE Lotus EXTRA – 400.000</p>
+<button onclick="addToCart('PANCAKE Lotus EXTRA  ',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-21 at 1.02.23 PM.jpeg"><p>PANCAKE Lotus – 300.000</p>
+<button onclick="addToCart(' PANCAKE Lotus  ',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.17.58 PM (2).jpeg"><p>MINI PANCAKE 15 pieces– 250.000</p>
+<button onclick="addToCart(' MINI PANCAKE 15 pieces ',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.09.56 PM (1).jpeg"><p>CHEESECAKE - 100.000</p>
+<button onclick="addToCart(' CHEESECAKE  ',100000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.26 PM.jpeg"><p>DONAT - 100.000</p>
+<button onclick="addToCart('DONAT  ',100000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.26 PM (1).jpeg"><p>ECLER - 100.000</p>
+<button onclick="addToCart(' ECLER  ',100000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.29.54 PM.jpeg"><p> CHEESE CAKE - 200.000</p>
+<button onclick="addToCart(' CHEESE CAKE ',200000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.29.55 PM (3).jpeg"><p> CHEESE CAKE - 200.000</p>
+<button onclick="addToCart(' CHEESE CAKE ',200000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 9.59.58 AM.jpeg"><p> LEASE CAKE - 100.000</p>
+<button onclick="addToCart(' LEASE CAKE ',100000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.09.25 AM.jpeg"><p> SUCHI CREPE EXTRA - 400.000</p>
+<button onclick="addToCart(' SUCHI CREPE EXTRA  ',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.09.25 AM.jpeg"><p> SUCHI CREPE - 350.000</p>
+<button onclick="addToCart(' SUCHI CREPE  ',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.16.21 AM.jpeg"><p>  WAFFLE  EXTRA - 300.000</p>
+<button onclick="addToCart('  WAFFLE  EXTRA ',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.25.44 AM.jpeg"><p>  WAFFLE CHOCOLATE - 200.000</p>
+<button onclick="addToCart(' WAFFLE CHOCOLATE  ',200000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.21.30 AM.jpeg"><p>  OUZY CREPE- 350.000 (+FRUITS 400.00)</p>
+<button onclick="addToCart('OUZY CREPE ',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.18.41 AM.jpeg"><p> FETTUCCINE CREPE - 250.000</p>
+<button onclick="addToCart('FETTUCCINE CREPE ',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.29.45 AM.jpeg"><p> ROLL CREPE CREAM PATISSIER - 250.000</p>
+<button onclick="addToCart(' ROLL CREPE CREAM PATISSIER ',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.34.13 AM.jpeg"><p>  WHITE CHOCOLATE EXTRA - 300.000</p>
+<button onclick="addToCart(' WHITE CHOCOLATE EXTRA ',300000)">أضف إلى السلة</button></div>
 </section>
 <section id="KOKTEL" class="menu hidden">
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (1).jpeg"><p>SHARAB L – 250.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (1).jpeg"><p>SHARAB S – 200.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (1).jpeg"><p>SHARAB L – 250.000</p>
+<button onclick="addToCart(' SHARAB L  ',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (1).jpeg"><p>SHARAB S – 200.000</p>
+<button onclick="addToCart(' SHARAB S ',200000)">أضف إلى السلة</button></div>
 
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (1).jpeg"><p>SHARAB XL – 300.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (2).jpeg"><p>AVOCADO S – 250.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (2).jpeg"><p>AVOCADO XL – 450.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (2).jpeg"><p>AVOCADO L – 350.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM.jpeg"><p> NACHI L – 350.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM.jpeg"><p> NACHI S – 250.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM.jpeg"><p> NACHI XL – 450.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (1).jpeg"><p>SHARAB XL – 300.000</p>
+<button onclick="addToCart('SHARAB XL   ',300000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (2).jpeg"><p>AVOCADO S – 250.000</p>
+<button onclick="addToCart('AVOCADO S',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (2).jpeg"><p>AVOCADO XL – 450.000</p>
+<button onclick="addToCart('AVOCADO XL  ',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM (2).jpeg"><p>AVOCADO L – 350.000</p>
+<button onclick="addToCart('AVOCADO L  ',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM.jpeg"><p> NACHI L – 350.000</p>
+<button onclick="addToCart('NACHI L  ',350000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM.jpeg"><p> NACHI S – 250.000</p>
+<button onclick="addToCart('NACHI S  ',250000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM.jpeg"><p> NACHI XL – 450.000</p>
+<button onclick="addToCart('NACHI XL  ',450000)">أضف إلى السلة</button></div>
 
 
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (1).jpeg"><p> SHE2AF  S – 250.000</p></div> 
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (1).jpeg"><p> SHE2AF  XL – 450.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (1).jpeg"><p> SHE2AF  L – 350.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (1).jpeg"><p> SHE2AF  S – 250.000</p>
+<button onclick="addToCart('SHE2AF  S  ',250000)">أضف إلى السلة</button></div> 
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (1).jpeg"><p> SHE2AF  XL – 450.000</p>
+<button onclick="addToCart('SHE2AF  XL   ',450000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.50 PM (1).jpeg"><p> SHE2AF  L – 350.000</p>
+<button onclick="addToCart('SHE2AF  L  ',350000)">أضف إلى السلة</button></div>
 
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM.jpeg"><p>صحن صغير - 400.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM.jpeg"><p>صحن وسط - 600.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM.jpeg"><p>صحن كبير - 900.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM.jpeg"><p>صحن صغير - 400.000 </p>
+<button onclick="addToCart('صحن صغير  ',400000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM.jpeg"><p>صحن وسط - 600.000 </p>
+<button onclick="addToCart(' صحن وسط ',600000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.24 PM.jpeg"><p>صحن كبير - 900.000 </p>
+<button onclick="addToCart('صحن كبير  ',900000)">أضف إلى السلة</button></div>
 
 </section>
 <section id="SNACK" class="menu hidden">
 
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 3.04.17 PM.jpeg"><p>CHICKEN CURYY +RICE – 700.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 3.04.17 PM (2).jpeg"><p>STROGONOF +RICE – 700.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-09 at 3.04.17 PM (1).jpeg"><p>CHICKEN CRESPY +RICE  – 700.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 3.04.17 PM.jpeg"><p>CHICKEN CURYY +RICE – 700.000</p>
+<button onclick="addToCart('CHICKEN CURYY +RICE ',700000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 3.04.17 PM (2).jpeg"><p>STROGONOF +RICE – 700.000</p>
+<button onclick="addToCart('STROGONOF +RICE   ',700000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-09 at 3.04.17 PM (1).jpeg"><p>CHICKEN CRESPY +RICE  – 700.000</p>
+<button onclick="addToCart('CHICKEN CRESPY +RICE ',700000)">أضف إلى السلة</button></div>
 
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.50 PM.jpeg"><p> CRESPY +fries – 600.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM (2).jpeg"><p>FAHITA +fries– 600.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM.jpeg"><p>ZINGER + fries– 600.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (1).jpeg"><p> CLASIC BURGER+ fries– 500.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.54.33 AM.jpeg"><p> TORNADO BURGER + fries– 750.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.25.24 AM.jpeg"><p> SITOS BURGER + fries– 600.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.25.24 AM (2).jpeg"><p> MUSHROOM BURGER + fries– 600.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM.jpeg"><p> MOZZARELLA BEEF BURGER+ fries– 600.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (4).jpeg"><p> STEAK SUB + fries– 600.000</p></div> 
-<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (2).jpeg"><p> PICASSO + fries – 600.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.27.54 PM.jpeg"><p>HAWAIN TROPICANA CHIKEN + fries – 600.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.50 PM.jpeg"><p> CRESPY +fries – 600.000</p>
+<button onclick="addToCart('CRESPY +fries ',600000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.42 PM (2).jpeg"><p>FAHITA +fries– 600.000</p>
+<button onclick="addToCart('FAHITA +fries',600000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM.jpeg"><p>ZINGER + fries– 600.000</p>
+<button onclick="addToCart('ZINGER + fries ',600000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (1).jpeg"><p> CLASIC BURGER+ fries– 500.000</p>
+<button onclick="addToCart('CLASIC BURGER+ fries',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.54.33 AM.jpeg"><p> TORNADO BURGER + fries– 750.000</p>
+<button onclick="addToCart('TORNADO BURGER + fries',750000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.25.24 AM.jpeg"><p> SITOS BURGER + fries– 600.000</p>
+<button onclick="addToCart('SITOS BURGER + fries',600000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 10.25.24 AM (2).jpeg"><p> MUSHROOM BURGER + fries– 600.000</p>
+<button onclick="addToCart('MUSHROOM BURGER + fries ',600000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 4.26.49 PM.jpeg"><p> MOZZARELLA BEEF BURGER+ fries– 600.000</p>
+<button onclick="addToCart(' MOZZARELLA BEEF BURGER+ fries ',600000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.44 PM (4).jpeg"><p> STEAK SUB + fries– 600.000</p>
+<button onclick="addToCart('STEAK SUB + fries',600000)">أضف إلى السلة</button></div> 
+<div class="dish"><img src="WhatsApp Image 2026-02-12 at 3.34.45 PM (2).jpeg"><p> PICASSO + fries – 600.000</p>
+<button onclick="addToCart('PICASSO + fries ',600000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.27.54 PM.jpeg"><p>HAWAIN TROPICANA CHIKEN + fries – 600.000</p>
+<button onclick="addToCart('HAWAIN TROPICANA CHIKEN + fries ',600000)">أضف إلى السلة</button></div>
 </section>
 <section id="BOX" class="menu hidden">
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.09.54 PM.jpeg"><p> BOX CREPE – (1000.000-1200.000-1500.000)</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.09.55 PM.jpeg"><p> BOX CREPE– (1000.000-1200.000-1500.000)</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.09.56 PM.jpeg"><p> BOX CREPE – (1000.000-1200.000-1500.000)</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.17.58 PM (3).jpeg"><p> BOX CREPE – (1000.000-1200.000-1500.000)</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.17.58 PM (4).jpeg"><p> BOX CREPE – (1000.000-1200.000-1500.000)</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.17.58 PM (6).jpeg"><p> BOX CREPE – (1000.000-1200.000-1500.000)</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM (1).jpeg"><p> BOX SNACK – 900.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM (2).jpeg"><p> BOX SNACK – 900.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM (3).jpeg"><p> BOX SNACK – 900.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM (4).jpeg"><p> BOX SNACK – 900.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.09.54 PM.jpeg"><p> BOX CREPE – (1000.000-1200.000-1500.000)</p>
+<button onclick="addToCart('BOX CREPE ',0)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.09.55 PM.jpeg"><p> BOX CREPE– (1000.000-1200.000-1500.000)</p>
+<button onclick="addToCart('BOX CREPE ',0)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.09.56 PM.jpeg"><p> BOX CREPE – (1000.000-1200.000-1500.000)</p>
+<button onclick="addToCart('BOX CREPE  ',0)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.17.58 PM (3).jpeg"><p> BOX CREPE – (1000.000-1200.000-1500.000)</p>
+<button onclick="addToCart('BOX CREPE ',0)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.17.58 PM (4).jpeg"><p> BOX CREPE – (1000.000-1200.000-1500.000)</p>
+<button onclick="addToCart('BOX CREPE  ',0)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.17.58 PM (6).jpeg"><p> BOX CREPE – (1000.000-1200.000-1500.000)</p>
+<button onclick="addToCart('BOX CREPE  ',0)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM (1).jpeg"><p> BOX SNACK – 900.000</p>
+<button onclick="addToCart('BOX SNACK ',900000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM (2).jpeg"><p> BOX SNACK – 900.000</p>
+<button onclick="addToCart('BOX SNACK ',900000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM (3).jpeg"><p> BOX SNACK – 900.000</p>
+<button onclick="addToCart('BOX SNACK',900000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-14 at 2.23.19 PM (4).jpeg"><p> BOX SNACK – 900.000</p>
+<button onclick="addToCart('BOX SNACK ',900000)">أضف إلى السلة</button></div>
 
 
 </section>
 <section id="offers" class="menu hidden">
 
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.40.51 PM (1).jpeg"><p> OFFER – 500.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.40.51 PM (1).jpeg"><p> OFFER – 500.000</p>
+<button onclick="addToCart(' OFFER ',500000)">أضف إلى السلة</button></div>
 
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.40.54 PM (1).jpeg"><p> OFFER – 500.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.40.54 PM.jpeg"><p> OFFER – 900.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.25 PM.jpeg"><p> OFFER – 1.000.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.28 PM (1).jpeg"><p> OFFER –500.000 </p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.40.54 PM (1).jpeg"><p> OFFER – 500.000</p>
+<button onclick="addToCart(' OFFER ',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.40.54 PM.jpeg"><p> OFFER – 900.000</p>
+<button onclick="addToCart(' OFFER ',900000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.25 PM.jpeg"><p> OFFER – 1.000.000</p>
+<button onclick="addToCart(' OFFER ',1000000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.28 PM (1).jpeg"><p> OFFER –500.000 </p>
+<button onclick="addToCart(' OFFER ',500000)">أضف إلى السلة</button></div>
 
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.29 PM (1).jpeg"><p> OFFER –500.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.29 PM.jpeg"><p> OFFER – 500.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 11.07.17 AM.jpeg"><p> OFFER –500.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.30 PM (1).jpeg"><p> OFFER – 700.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.32 PM (1).jpeg"><p> OFFER – 500.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.34 PM (2).jpeg"><p> OFFER –500.000 </p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.34 PM.jpeg"><p> OFFER – 500.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.32 PM.jpeg"><p> OFFER – 900.000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 11.11.58 AM.jpeg"><p> OFFER – 1.000.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.29 PM (1).jpeg"><p> OFFER –500.000 </p>
+<button onclick="addToCart(' OFFER ',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.29 PM.jpeg"><p> OFFER – 500.000 </p>
+<button onclick="addToCart(' OFFER ',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 11.07.17 AM.jpeg"><p> OFFER –500.000 </p>
+<button onclick="addToCart(' OFFER ',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.42.30 PM (1).jpeg"><p> OFFER – 700.000</p>
+<button onclick="addToCart(' OFFER ',700000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.32 PM (1).jpeg"><p> OFFER – 500.000</p>
+<button onclick="addToCart(' OFFER ',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.34 PM (2).jpeg"><p> OFFER –500.000 </p>
+<button onclick="addToCart(' OFFER ',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.34 PM.jpeg"><p> OFFER – 500.000</p>
+<button onclick="addToCart(' OFFER ',500000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-07 at 2.46.32 PM.jpeg"><p> OFFER – 900.000</p>
+<button onclick="addToCart(' OFFER ',900000)">أضف إلى السلة</button></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 11.11.58 AM.jpeg"><p> OFFER – 1.000.000</p>
+<button onclick="addToCart(' OFFER ',1000000)">أضف إلى السلة</button></div>
 
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 11.11.57 AM (4).jpeg"><p> OFFER – 700.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 11.11.57 AM (4).jpeg"><p> OFFER – 700.000</p>
+<button onclick="addToCart(' OFFER ',700000)">أضف إلى السلة</button></div>
 
-<div class="dish"><img src="WhatsApp Image 2026-02-23 at 11.11.57 AM.jpeg"><p> OFFER – 700.000</p></div>
+<div class="dish"><img src="WhatsApp Image 2026-02-23 at 11.11.57 AM.jpeg"><p> OFFER – 700.000</p>
+<button onclick="addToCart(' OFFER ',700000)">أضف إلى السلة</button></div>
 <div class="dish">
   <video controls>
     <source src="WhatsApp Video 2026-02-20 at 5.12.11 PM.mp4" type="video/mp4">
@@ -448,30 +698,118 @@ font-weight:bold;
 
 </section>
 
-<footer>
-©️ TORNADO
-</footer>
+<!-- سلة الطلب -->
+<div id="cart">
+<ul id="cartItems"></ul>
+<p>المجموع: <span id="total">0</span> ل.ل</p>
+<button class="send" onclick="sendWhatsApp()">إرسال الطلب عبر واتساب</button>
+</div>
+
+<footer>©️ tornado </footer>
 
 <script>
+var cart = [];
+var total = 0;
 
+/* إظهار الأقسام */
 function showSection(id){
 
-document.getElementById("welcome").style.display="none";
+// إخفاء الترحيب
+document.getElementById("welcome").style.display = "none";
 
-document.querySelectorAll(".menu").forEach(section=>{
-section.classList.add("hidden");
-});
-
-document.getElementById(id).classList.remove("hidden");
-
+// إخفاء كل الأقسام
+var sections = document.querySelectorAll(".menu");
+for(var i=0;i<sections.length;i++){
+sections[i].classList.add("hidden");
 }
 
+// إظهار القسم المطلوب
+document.getElementById(id).classList.remove("hidden");
+}
+
+/* إضافة أو زيادة الكمية */
+function addToCart(name, price){
+for(var i=0;i<cart.length;i++){
+if(cart[i].name === name){
+cart[i].qty++;
+updateTotal();
+renderCart();
+return;
+}
+}
+cart.push({name:name, price:price, qty:1});
+updateTotal();
+renderCart();
+}
+
+/* حساب المجموع */
+function updateTotal(){
+total = 0;
+for(var i=0;i<cart.length;i++){
+total += cart[i].price * cart[i].qty;
+}
+}
+
+/* عرض السلة */
+function renderCart(){
+var ul = document.getElementById("cartItems");
+ul.innerHTML = "";
+
+for(var i=0;i<cart.length;i++){
+var li = document.createElement("li");
+li.className = "cart-item";
+
+li.innerHTML =
+cart[i].name +
+" (" + cart[i].price + ")" +
+'<div class="cart-controls">' +
+'<button onclick="changeQty('+i+',-1)">-</button>' +
+cart[i].qty +
+'<button onclick="changeQty('+i+',1)">+</button>' +
+'<button class="remove" onclick="removeItem('+i+')">✕</button>' +
+'</div>';
+
+ul.appendChild(li);
+}
+document.getElementById("total").textContent = total;
+}
+
+/* تغيير الكمية */
+function changeQty(index, change){
+cart[index].qty += change;
+if(cart[index].qty <= 0){
+cart.splice(index,1);
+}
+updateTotal();
+renderCart();
+}
+
+/* حذف الصنف */
+function removeItem(index){
+cart.splice(index,1);
+updateTotal();
+renderCart();
+}
+
+/* إرسال واتساب */
+function sendWhatsApp(){
+if(cart.length === 0){
+alert("السلة فارغة");
+return;
+}
+
+var message = "مرحبا، أود طلب:\n";
+for(var i=0;i<cart.length;i++){
+message += "- " + cart[i].name + " × " + cart[i].qty + "\n";
+}
+message += "المجموع: " + total + " ل.ل";
+
+var phone = "96103385908";
+var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+window.open(url,"_blank");
+}
 </script>
 
 </body>
 </html>
-
-</body>
-</html>
-
 
